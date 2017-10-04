@@ -1,5 +1,7 @@
 # helloDroid
 Simple android app
 
+<br></br>
 **Example Output**
-![screenshot](Screenshot_1507092091.png)
+<br></br>
+<img src="Screenshot_1507092091.png" width="40%">
