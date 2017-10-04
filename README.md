@@ -2,4 +2,4 @@
 Simple android app
 
 **Example Output**
-![screenshot](day1.png)
+![screenshot](Screenshot_1507092091.png)
