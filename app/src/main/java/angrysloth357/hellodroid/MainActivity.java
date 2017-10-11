@@ -1,8 +1,12 @@
 package angrysloth357.hellodroid;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -33,11 +37,16 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
+
         });
 
         // Example of a call to a native method
         //TextView tv = (TextView) findViewById(R.id.sample_text);
         //tv.setText(stringFromJNI());
+
+        /* Add camera buttons */
+        ImageButton imgBtn = (ImageButton) findViewById(R.id.imageButton);
+        ImageView mImageView = (ImageView) findViewById(R.id.imageView);
     }
 
     @Override
@@ -82,5 +91,24 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         //Start instance of DisplayMessageActivity
         startActivity(intent);
+    }
+
+    /* Shreeya: Add intent to use the Camera */
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+    public void dispatchTakePictureIntent(View view) { //View was needed to use the camera :o
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        ImageView mImageView = (ImageView) findViewById(R.id.imageView);
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            mImageView.setImageBitmap(imageBitmap);
+        }
     }
 }
