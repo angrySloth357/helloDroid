@@ -1,6 +1,8 @@
 package angrysloth357.hellodroid;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -67,7 +69,18 @@ public class MainActivity extends AppCompatActivity {
     public native String stringFromJNI();
 
     /** Shreeya: method Called when the user taps the Send button */
+    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     public void sendMessage(View view) {
         // Do something in response to button
+        //1. Make an intent to communicate with new activity, needs => this:current context; DisplayMessageActivity.class: class of app to deliver intent to
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        //get User input text
+        EditText editText = (EditText) findViewById(R.id.editText);
+        //convert into string
+        String message = editText.getText().toString();
+        //Add message as key-value pairs called extras, key is the EXTRA_MESSAGE
+        intent.putExtra(EXTRA_MESSAGE, message);
+        //Start instance of DisplayMessageActivity
+        startActivity(intent);
     }
 }
