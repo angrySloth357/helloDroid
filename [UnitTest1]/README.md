@@ -1,6 +1,6 @@
 # Automated Test using Monkey
 
-## Run Monkey for 5000 events to check for crash
+### Run Monkey for 5000 events to check for crash after login.
 
 ### adb shell monkey -p angrysloth357.hellodroid  -v 5000
 
