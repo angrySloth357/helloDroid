@@ -1,19 +1,19 @@
 # helloDroid
-**[Work In Progress]** 
 
 Simple android app that enables users to log in, take picture and post messages.
 
-<br></br>
 **Example Output Video**
 <br></br>
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/fz4XZ3MWlWE/0.jpg)](http://www.youtube.com/watch?v=fz4XZ3MWlWE)
 
 ## [Trello](https://trello.com/b/cjSwTxBu/homework2)
 
-## Pending Features:
+## Latest Addition
 
-1. Extend Authentication
+### Unit Tests Addded:
 
-2. Enable Storage
+**[[UnitTest1]](https://github.com/angrySloth357/helloDroid/tree/master/%5BUnitTest1%5D)**
 
-3. Enable Posting 
+**[UnitTest2]**
+
+**[UnitTest3]**
