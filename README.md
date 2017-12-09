@@ -1,5 +1,4 @@
 # helloDroid
-**[Work In Progress]** 
 
 Simple android app that enables users to log in, take picture and post messages.
 
@@ -10,10 +9,9 @@ Simple android app that enables users to log in, take picture and post messages.
 
 ## [Trello](https://trello.com/b/cjSwTxBu/homework2)
 
-## Pending Features:
+## Latest Addition
 
-1. Extend Authentication
-
-2. Enable Storage
-
-3. Enable Posting 
+### Unit Tests Addded:
+*[UnitTest1]*
+*[UnitTest2]*
+*[UnitTest3]*
