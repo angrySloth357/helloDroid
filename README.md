@@ -15,5 +15,3 @@ Simple android app that enables users to log in, take picture and post messages.
 **[[UnitTest1]](https://github.com/angrySloth357/helloDroid/tree/master/%5BUnitTest1%5D)**
 
 **[[UnitTest2]](https://github.com/angrySloth357/helloDroid/tree/master/%5BUnitTest2%5D)**
-
-**[UnitTest3]**
